@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+  <!-- ── Setup Screen ── -->
+  <h1>Tic Tac Toe</h1>
+
+  <div class="setup-card" id="setupCard">
+    <label>Choose Board Size</label>
+    <div class="row-input-wrap">
+      <button class="row-btn" id="btnMinus" aria-label="Decrease rows">−</button>
+      <span id="rowCount">3</span>
+      <button class="row-btn" id="btnPlus" aria-label="Increase rows">+</button>
+    </div>
+    <button class="btn-start" id="btnStart">Start Game</button>
+  </div>
+
+  <!-- ── Game Screen ── -->
+  <div class="game-wrapper" id="gameWrapper">
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-card x-card active-x" id="scoreCardX">
+        <div class="player-label">Player X</div>
+        <div class="score-value" id="scoreX">0</div>
+      </div>
+      <div class="score-card o-card" id="scoreCardO">
+        <div class="player-label">Player O</div>
+        <div class="score-value" id="scoreO">0</div>
+      </div>
+    </div>
+
+    <!-- Turn -->
+    <div class="turn-indicator" id="turnIndicator">
+      Turn: <span class="turn-x">Player X</span>
+    </div>
+
+    <!-- Board -->
+    <div class="board" id="board"></div>
+
+    <!-- Buttons -->
+    <div class="btn-row">
+      <button id="btnReset">↺ New Round</button>
+      <button id="btnBack">← Change Size</button>
+    </div>
+
+    <!-- Keyboard hint -->
+    <div class="kb-hint">
+      Navigate: <kbd>Tab</kbd> <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> &nbsp; Play: <kbd>Enter</kbd>
+      <kbd>Space</kbd>
+    </div>
+  </div>
+
+  <!-- ── Win / Draw Overlay ── -->
+  <div class="msg-overlay" id="msgOverlay" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <div class="msg-box">
+      <h2 id="msgTitle"></h2>
+      <p id="msgSub"></p>
+      <button id="btnMsgOk">Continue</button>
+    </div>
+  </div>
+
+  <script src="Js/script.js"></script>
+</body>
+
+</html>
